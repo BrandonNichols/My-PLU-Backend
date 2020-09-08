@@ -4,7 +4,7 @@ module.exports = {
   development: {
     client: "pg",
     connection: {
-      database: process.env.DATABASE_URL,
+      database: process.env.HEROKU_POSTGRESQL_COBALT_URL,
       user: process.env.USER,
       password: process.env.PASSWORD
     },
@@ -23,7 +23,7 @@ module.exports = {
 
   production: {
     client: "pg",
-    connection: process.env.DATABASE_URL,
+    connection: process.env.HEROKU_POSTGRESQL_COBALT_URL,
     migrations: {
       directory: "./data/migrations"
     },
